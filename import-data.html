@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>测试的</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <div class='title-bar'>
+            <div class='tittle-before'>
+              <img src="images/logo.png" width=32 height=32 id="close" alt="">
+            </div>
+            <div class='title-middle'>
+                <span class='title no-dblclick'>离线数据导入</span>
+            </div>
+            <div class='title-after no-drag'>
+                <button class='btn2' id="goPageHome">返回首页</button>
+            </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div>
+          <h1>Hello Electron!</h1>
+          <p>👋</p>
+          <p id="info"></p>
+          <button id='btn_changewnd'>重新设置窗口大小</button>
+          <button id='btn_ajax'>http get/post</button>
+          <button id='btn_mac'>获取mac地址</button>
+
+
+          <button id='btn_call'>call方法的使用</button>
+
+          <button id='btn_upload'>上传文件测试</button>
+
+          <button id='btn_download'>下载文件测试</button>
+
+        </div>
+    </div>
+
+    <div class="foot">
+        <script src="./footer.js"></script>
+    </div>
+  </div>
+  </body>
+  <script src="./import-data.js"></script>
+</html>

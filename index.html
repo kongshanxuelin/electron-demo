@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>测试的</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="head">
+        <div class='title-bar'>
+            <div class='tittle-before'>
+              <img src="images/logo.png" width=32 height=32 id="close" alt="">
+            </div>
+            <div class='title-middle'>
+                <span class='title no-dblclick'>数据浏览器</span>
+            </div>
+            <div class='title-after no-drag'>
+                <button class='btn2'id="goPageImportData">离线数据导入</button>
+            </div>
+      </div>
+    </div>
+
+    <div class="panel">
+
+    </div>
+
+    <div class="foot">
+        <script src="./footer.js"></script>
+    </div>
+  </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>

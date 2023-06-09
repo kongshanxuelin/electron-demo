@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* user-select: none; */
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #333 !important;
+      color: white !important;
+    }
+  
+    .head {
+        background:#193d37;
+        color:#ffebc8;
+    }
+  
+    .foot {
+        background:#193d37;
+        color:#8f9598;
+        font-family:MicrosoftYaHei;
+        font-size:14px;
+        padding:4px;
+    }
+  
+    .panel-left {
+      background-color: rgb(41, 40, 40);
+    }
+  
+    /* 拖拽区域 */
+    .drag-area {
+      background-color: rgba(128, 128, 128, 0.801);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    body {
+        background: #ddd !important;
+      color: black !important;
+    }
+  
+    .head,
+    /* .panel, */
+    .panel-left,
+    .panel-right,
+    .foot {
+      margin: 0 -1px -1px 0;
+      ;
+      border: 1px solid rgb(211, 209, 209);
+    }
+  
+    .head {
+      background-color: white;
+    }
+  
+    .panel-left {
+      background-color: rgb(195, 195, 195);
+    }
+  
+    /* 拖拽区域 */
+    .drag-area {
+      background-color: rgba(128, 128, 128, 0.9);
+    }
+  
+    .foot {
+      background-color: white;
+      color:#8f9598;
+      font-family:MicrosoftYaHei;
+      font-size:14px;
+      padding:4px;
+    }
+  
+  }
+  
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .head {
+    /* position: absolute; */
+    /* top: 0px; */
+    width: 100%;
+    height: 40px;
+    user-select: none;
+    font-size: 14px;
+  }
+  
+  .panel {
+    /* background-color: blue; */
+    /* position: absolute; */
+    width: 100%;
+    top: 28px;
+    bottom: 20px;
+    flex: 1;
+    display: flex;
+  }
+  
+  .panel-left {
+    width: 150px;
+    height: 100%;
+  }
+  
+  .panel-right {
+    flex: 1;
+    height: 100%;
+    position: relative;
+  }
+  
+  /* 拖拽区域 */
+  .drag-area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+    text-align: center;
+  }
+  .drag-area-icon{
+    pointer-events: none;
+    position: relative;
+    top:40%;
+  }
+  
+  .operate-area {
+    /* background-color: red; */
+    height: 35px;
+  }
+  
+  
+  .foot {
+    bottom: 0px;
+    height: 20px;
+    width: 100%;
+    /* position: absolute; */
+  }
+
+
+  body {
+    margin: 0;
+  }
+  
+  .title-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    user-select: none;
+    -webkit-app-region: drag;
+  }
+  
+  .tittle-before {
+    margin:3px 4px;
+    line-height: 38px;
+    height: 100%;
+  }
+  
+  .title-middle {
+    flex: 1;
+    text-align: left;
+    line-height: 38px;
+  }
+  
+  .title-after {
+    right: 0;
+    width: 120px;
+    height: 100%;
+    /* text-align: center; */
+    line-height: 38px;
+    margin-right:150px;
+    color:#fe900d;
+  }
+  
+  .dark-mode-btn{
+    margin-left: 70%;
+  }
+  
+  .no-drag {
+    -webkit-app-region: no-drag;
+  }
+  .btn2 {
+    background:#ff9200;
+    border:1px solid #193d37;
+    height:32px;
+    padding:2px;
+    font-family:MicrosoftYaHei;
+    font-size:14px;
+    color:#1b1b1b;
+    text-align:left;
+    padding:0px 4px;
+  }
+  .theme-change{
+    font-family:MicrosoftYaHei;
+    font-size:14px;
+    color:#d2a346;
+    line-height:14px;
+    text-align:left;
+    margin-left:8px;
+    cursor: pointer;
+  }
